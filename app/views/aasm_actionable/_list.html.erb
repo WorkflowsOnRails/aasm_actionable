@@ -1,0 +1,26 @@
+<div class="actions">
+  <% if actions.empty? %>
+  <p>
+    You cannot perform any actions at this time.
+  </p>
+  <% else %>
+  <ul class="nav nav-tabs">
+    <% actions.each_with_index do |action, index| %>
+    <li class="<%= if index == 0 then 'active' end %>">
+      <a href="#<%= action.id %>" data-toggle="tab">
+        <%= action.title %>
+      </a>
+    </li>
+    <% end %>
+  </ul>
+
+  <div class="tab-content">
+    <% actions.each_with_index do |action, index| %>
+    <div class="action-tab tab-pane <%= if index == 0 then 'active' end %>"
+         id="<%= action.id %>">
+      <%= render partial: action.partial, locals: {taskable: taskable} %>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>

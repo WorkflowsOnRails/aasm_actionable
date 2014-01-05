@@ -1,2 +1,3 @@
 - Add a generator to copy the template view into the user's project.
 - Add tests for the controller mixin.
+- Use `AASM::Localizer` to produce action names, instead of `to_s`.

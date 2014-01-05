@@ -1,3 +1,4 @@
 - Add a generator to copy the template view into the user's project.
 - Add tests for the controller mixin.
 - Use `AASM::Localizer` to produce action names, instead of `to_s`.
+- Add a generator for form-based actions that handles verifying the event's existence, stubbing in a pundit policy, adding a controller action, and creating a view.

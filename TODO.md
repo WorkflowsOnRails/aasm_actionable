@@ -2,3 +2,5 @@
 - Add tests for the controller mixin.
 - Use `AASM::Localizer` to produce action names, instead of `to_s`.
 - Add a generator for form-based actions that handles verifying the event's existence, stubbing in a pundit policy, adding a controller action, and creating a view.
+- Add an equivalent of [responders](https://github.com/plataformatec/responders) for custom actions.
+- Add an interceptor to capture exceptions thrown by tasks and redirect to the show action with a warning. (Useful if a user double-clicks on a button and the second actions attempts an invalid transition.)

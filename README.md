@@ -21,11 +21,11 @@ Each action that aasm_actionable may display requires the developer to provide t
  
 Additionally, you may wish to create a controller method and route to handle the action being performed. By convention, the controller method should have the same name as the action, ie. `do_action` for the example above.
 
-Once you have provided one or more actions for a model, you can render a model instance's available actions by including `AasmActionable::ControllerMixin` in your controller, and adding `<%= render_state_actions my_instance %>` in your view.
+Once you have provided one or more actions for a model, you can render a model instance's available actions by including `AasmActionable::ControllerMixin` in your controller, and adding `<%= render_state_actions my_instance %>` in your view. The default template uses styles and code from [Bootstrap 3](http://getbootstrap.com/), so you should either ensure that it is included in your application, or change the default template (see Custom Rendering below.) 
 
 
-Usage Example
--------------
+Example
+-------
 
 Consider the following contrived Order model (in `app/models/order.rb`) for a (trivial) online store:
 
@@ -143,7 +143,7 @@ Next, we create a partial for each action. For example, for the dispatch action 
 Finally, we render the actions in the order view by adding `<%= render_state_actions @order %>` to `app/views/order/show.html.erb`.
 
 
-Customizing Action Rendering
-----------------------------
+Custom Rendering
+----------------
 
-_TODO (mention that the default template uses the Bootstrap 3 tab component)_
+The default template for `aasm_actionable` can be customized as necessary. Run `rails g aasm_actionable:views` to copy the template to app/views/aasm_actionable/_list.html.erb, and edit it as required.

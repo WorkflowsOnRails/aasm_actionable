@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'aasm_actionable'
-  s.version     = '1.0.0'
-  s.date        = '2014-01-03'
+  s.version     = '1.0.1'
+  s.date        = '2014-03-31'
   s.summary     = "AASM Actionable"
   s.description = "Rails extension to render appropriate workflow actions"
   s.authors     = ["Brendan MacDonell"]
